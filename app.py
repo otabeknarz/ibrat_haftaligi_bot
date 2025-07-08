@@ -31,15 +31,20 @@ inline_buttons = InlineButtons()
 
 photo = FSInputFile("top-students.jpg")
 get_welcome_text = (
-    lambda join_link: f"""Avval qatnashib ko'ring, rahmatni keyin aytasiz!
+    lambda join_link: f"""📌 Avval qatnashib ko'ring, rahmatni keyin aytasiz!
 
-🎙 "Ibrat haftaligi – 7 kun, 7 yangi marra" da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz.
+🎙 "Ibrat haftaligi – 7 kun, 7 yangi marra" da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz:
 
+• Xushnudbek Xudoyberdiyev – huquqshunos;
+• Otabek Mahkamov – huquqshunos, bloger va jurnalist;
+• Rustam Qoriyev – "Ibrat Farzandlari" loyiha rahbari;
+• Alisher Sa'dullayev – Yoshlar ishlari agentligi direktori;
+• Murod Nazarov – "Murad Buildings" asoschisi;
+• Shohida Ibragimova – moliyachi;
+• Aziz Rahimov – "Rahimov school" asoschisi
 🤩 Bundan tashqari, eng faol targ'ibotchi sifatida 6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslarini yutib olish imkoniga ega bo'lasiz.
 
-🫱🏻‍🫲🏻 Sizni ishontirib ayta olamizki, marafonda qatnashib hayotingizdagi eng to'g'ri qarorni qabul qilgan bo'lasiz!
-
-Qatnashish – mutlaqo BEPUL.
+🙌🏻 Qatnashish – mutlaqo BEPUL.
 
 https://t.me/ibrat_haftaligi_bot?start={join_link}
 """
@@ -146,6 +151,7 @@ https://onelink.to/ibratfarzandlari""")
 Xo'sh, diqqat bilan o'qing!
 
 💯 Marafonda qatnashish mutlaqo bepul va loyihamizning ko'proq odamga foydasi tegishi uchun aynan sizning yordamingiz kerak bo'ladi.
+
 ✅ Sharti: bot sizga taqdim qilgan maxsus link orqali 7 ta do'stingizni loyihamizga taklif qilasiz va avtomatik tarzda loyihada ishtirok etishingiz uchun maxsus linkni qabul qilib olasiz.
 
 📌Unutmang, taklif postingiz orqali to'liq ro'yxatdan o'tgan har bir do'stingiz uchun sizga +1 ball beriladi.
@@ -156,7 +162,17 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 🥇1-o'rin: 3 million so'm
 🥈2-o'rin: 2 million so'm
 🥉3-o'rin: 1 million so'm
-🎖4-o'rin: 500 ming so'm pul mukofotlari va boshqa ko'plab sovg'alar bilan taqdirlanishadi.
+🎖4-o'rin:  500 ming so'm pul mukofotlari 
+
+• 5-20-o'rin – Rustam Qoriyevning mualliflik kitoblari;
+• 21-40-o'rin – "Super Start" beginner;
+• 41-60-o'rin – "Super Start" elementary;
+• 61-80-o'rin – "Tezkor Turk tili" 
+• 81-100-o'rin – "Tezkor Rus tili" qiymati 159.000 so'mga teng bo'lgan 3 oylik premium til kurslari;
+
+• 101-120-o'rin – 40% lik chegirma;
+• 121-160-o'rin – 30% lik chegirma;
+• 161-200-o'rin – 20% lik chegirma taqdim qilinadi.
 
 ❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki 7000 ta ishtirokchidan so'ng marafonga START beriladi va boshqa talabgorlar qabul qilinmaydi.
 

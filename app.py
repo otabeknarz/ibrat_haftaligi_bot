@@ -9,7 +9,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.types import Message, CallbackQuery, FSInputFile
+from aiogram.types import Message, CallbackQuery, FSInputFile, InlineKeyboardMarkup
 
 from modules import functions
 from modules import settings
@@ -31,10 +31,11 @@ inline_buttons = InlineButtons()
 
 photo = FSInputFile("top-students.jpg")
 get_welcome_text = (
-    lambda join_link: f"""📌 Avval qatnashib ko'ring, rahmatni keyin aytasiz!
+    lambda join_link: f"""<b>📌 Avval qatnashib ko'ring, rahmatni keyin aytasiz!</b>
 
-🎙 "Ibrat haftaligi – 7 kun, 7 yangi marra" da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz:
+🎙 <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz:
 
+<blockquote>
 • Xushnudbek Xudoyberdiyev – huquqshunos;
 • Otabek Mahkamov – huquqshunos, bloger va jurnalist;
 • Rustam Qoriyev – "Ibrat Farzandlari" loyiha rahbari;
@@ -42,9 +43,11 @@ get_welcome_text = (
 • Murod Nazarov – "Murad Buildings" asoschisi;
 • Shohida Ibragimova – moliyachi;
 • Aziz Rahimov – "Rahimov school" asoschisi
+</blockquote>
+
 🤩 Bundan tashqari, eng faol targ'ibotchi sifatida 6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslarini yutib olish imkoniga ega bo'lasiz.
 
-🙌🏻 Qatnashish – mutlaqo BEPUL.
+<b>🙌🏻 Qatnashish – mutlaqo BEPUL.</b>
 
 https://t.me/ibrat_haftaligi_bot?start={join_link}
 """
@@ -91,7 +94,7 @@ Keyin "Obuna bo'ldim✅" tugmasini bosing:""",
         )
 
         json_response = response.json()
-        await message.answer(f"Sizda {len(json_response.get('invitations'))} ball bor")
+        await message.answer(f"Sizda <b>{len(json_response.get('invitations'))}</b> ball bor")
 
 
 @dp.message(TextEqualsFilter("📊 Natijalarim"))
@@ -100,8 +103,8 @@ async def my_stats_handler(message: Message) -> None:
     if response.ok:
         json_response = response.json()
         await message.answer(
-            f"Siz {len(json_response.get('invitations'))} ta do'stingizni taklif qilgansiz",
-            reply_markup=buttons.main_keyboard(),
+            f"Sizda <b>{len(json_response.get('invitations'))}</b> ball bor",
+            reply_markup=buttons.main_keyboard()
         )
     else:
         await message.answer(
@@ -129,7 +132,7 @@ async def all_callback_handler(callback: CallbackQuery) -> None:
             await callback.message.delete()
             await asyncio.sleep(1)
             await callback.message.answer(
-                """😊 "Ibrat haftaligi – 7 kun, 7 yangi marra" da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
+                """😊 <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
 
 "Ibrat Academy" – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
 
@@ -138,7 +141,7 @@ Keyin "Obuna bo'ldim✅" tugmasini bosing:""",
             )
 
         else:
-            await callback.message.answer(""""Ibrat Academy" — 22 dan ortiq tillarni istalgan vaqt va makonda mustaqil o'rganing!
+            await callback.message.answer("""<b>"Ibrat Academy" — 22 dan ortiq tillarni istalgan vaqt va makonda mustaqil o'rganing!</b>
 
 🫱🏻‍🫲🏻 Pastdagi havola orqali ilovani yuklab olishingiz mumkin. Marhamat:
 
@@ -146,7 +149,7 @@ https://onelink.to/ibratfarzandlari""")
 
             await asyncio.sleep(1)
 
-            await callback.message.answer("""😉 Tabriklayman! "Ibrat haftaligi – 7 kun,, 7 yangi marra" ga xush kelibsiz!
+            await callback.message.answer("""😉 <b>Tabriklayman! "Ibrat haftaligi – 7 kun,, 7 yangi marra" ga xush kelibsiz!</b>
 
 Xo'sh, diqqat bilan o'qing!
 
@@ -159,10 +162,10 @@ Xo'sh, diqqat bilan o'qing!
 🤫 Va bu hali hammasi emas, agar siz eng faol targ'ibotchi bo'lishni maqsad qilsangiz, pul mukofotlari va boshqa ko'plab premium til kurslarini yutib olish imkoniga ega bo'lasiz!
 Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 
-🥇1-o'rin: 3 million so'm
-🥈2-o'rin: 2 million so'm
-🥉3-o'rin: 1 million so'm
-🎖4-o'rin:  500 ming so'm pul mukofotlari 
+🥇1-o'rin: <b>3 million so'm</b>
+🥈2-o'rin: <b>2 million so'm</b>
+🥉3-o'rin: <b>1 million so'm</b>
+🎖4-o'rin: <b>500 ming so'm pul mukofotlari </b>
 
 • 5-20-o'rin – Rustam Qoriyevning mualliflik kitoblari;
 • 21-40-o'rin – "Super Start" beginner;
@@ -174,7 +177,7 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 • 121-160-o'rin – 30% lik chegirma;
 • 161-200-o'rin – 20% lik chegirma taqdim qilinadi.
 
-❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki 7000 ta ishtirokchidan so'ng marafonga START beriladi va boshqa talabgorlar qabul qilinmaydi.
+❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki <b>7000 ta</b> ishtirokchidan so'ng marafonga <b>START</b> beriladi va boshqa talabgorlar qabul qilinmaydi.
 
 🫱🏻‍🫲🏻 Ko'p o'ylanmasdan, hoziroq taklif postingizni qabul qilib oling:""", reply_markup=inline_buttons.invitation_buttons)
 
@@ -195,9 +198,9 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
         )
         await asyncio.sleep(1)
         await callback.message.answer(
-            """🎉 Sizga berilgan postni do'stlaringiz bilan ulashing.
+            """🎉 <b>Sizga berilgan postni do'stlaringiz bilan ulashing.</b>
 
-• 7 ta do'stingiz sizning taklif havolangiz orqali, botga START berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
+• 7 ta do'stingiz sizning taklif havolangiz orqali, botga <b>START</b> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
         )
 
 

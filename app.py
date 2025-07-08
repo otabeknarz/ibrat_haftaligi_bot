@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
-from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message, CallbackQuery, FSInputFile
@@ -23,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 TOKEN = getenv("BOT_TOKEN")
 
-bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=html))
 dp = Dispatcher(storage=MemoryStorage())
 
 buttons = Buttons()

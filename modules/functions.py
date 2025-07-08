@@ -47,12 +47,12 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
             if invited_user_username.isdigit():
                 invited_user_name = f"{invited_user_json.get("first_name")} {invited_user_json.get("last_name")}"
                 await bot.send_message(
-                    invited_by_id, f"🥳 Tabriklaymiz! Siz <strong>{invited_user_name}</strong> ni taklif qildingiz."
+                    invited_by_id, f"🥳 Tabriklaymiz! Siz <b>{invited_user_name}</b> ni taklif qildingiz."
                 )
             else:
                 await bot.send_message(
                     invited_by_id,
-                    f"🥳 Tabriklaymiz! Siz <strong>@{invited_user_username}</strong> ni taklif qildingiz.",
+                    f"🥳 Tabriklaymiz! Siz <b>@{invited_user_username}</b> ni taklif qildingiz.",
                 )
 
         else:
@@ -72,9 +72,9 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
             ):
                 await bot.send_message(
                     invited_by_id,
-                    """<strong>🙌🏻 Barakalla, siz buni uddaladingiz!</strong>
+                    """<b>🙌🏻 Barakalla, siz buni uddaladingiz!</b>
 
-🤩 Siz shartni to'liq bajarib, 7 ta do'stingizni loyihaga taklif qilib <strong>"Ibrat haftaligi – 7 kun, 7 yangi marra"</strong> ning rasman qatnashchisiga aylandingiz!
+🤩 Siz shartni to'liq bajarib, 7 ta do'stingizni loyihaga taklif qilib <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> ning rasman qatnashchisiga aylandingiz!
 
 • Endi siz 7 kun davomida quyidagi spikerlar bilan bo'lib o'tadigan onlayn jonli va eng muhimi manfaatli suhbatlarda ishtirok eta olasiz:
 • Xushnudbek Xudoyberdiyev – huquqshunos;

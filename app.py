@@ -31,15 +31,15 @@ inline_buttons = InlineButtons()
 
 photo = FSInputFile("top-students.jpg")
 get_welcome_text = (
-    lambda join_link: f"""<strong>Avval qatnashib ko'ring, rahmatni keyin aytasiz!</strong>
+    lambda join_link: f"""<b>Avval qatnashib ko'ring, rahmatni keyin aytasiz!</b>
 
-<strong>🎙 "Ibrat haftaligi – 7 kun, 7 yangi marra"</strong> da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz.
+<b>🎙 "Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz.
 
 🤩 Bundan tashqari, eng faol targ'ibotchi sifatida 6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslarini yutib olish imkoniga ega bo'lasiz.
 
 🫱🏻‍🫲🏻 Sizni ishontirib ayta olamizki, marafonda qatnashib hayotingizdagi eng to'g'ri qarorni qabul qilgan bo'lasiz!
 
-<strong>Qatnashish – mutlaqo BEPUL.<strong>
+<b>Qatnashish – mutlaqo BEPUL.<b>
 
 https://t.me/ibrat_haftaligi_bot?start={join_link}
 """
@@ -73,9 +73,9 @@ async def command_start_handler(message: Message) -> None:
 
         unjoined_channels_inline_buttons = inline_buttons.get_join_channel_buttons(settings.CHANNELS_IDs)
         await message.answer(
-        """<strong>"Ibrat haftaligi – 7 kun, 7 yangi marra"</strong> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
+        """<b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
 
-<strong>"Ibrat Academy"</strong> – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
+<b>"Ibrat Academy"</b> – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
 
 Keyin "Obuna bo'ldim✅" tugmasini bosing:""",
             reply_markup=unjoined_channels_inline_buttons,
@@ -141,7 +141,7 @@ https://onelink.to/ibratfarzandlari""")
 
             await asyncio.sleep(1)
 
-            await callback.message.answer("""<strong>😉 Tabriklayman! "Ibrat haftaligi – 7 kun,, 7 yangi marra" ga xush kelibsiz!</strong>
+            await callback.message.answer("""<b>😉 Tabriklayman! "Ibrat haftaligi – 7 kun,, 7 yangi marra" ga xush kelibsiz!</b>
 
 Xo'sh, diqqat bilan o'qing!
 
@@ -153,12 +153,12 @@ Xo'sh, diqqat bilan o'qing!
 🤫 Va bu hali hammasi emas, agar siz eng faol targ'ibotchi bo'lishni maqsad qilsangiz, pul mukofotlari va boshqa ko'plab premium til kurslarini yutib olish imkoniga ega bo'lasiz!
 Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 
-<strong>🥇1-o'rin: 3 million so'm
+<b>🥇1-o'rin: 3 million so'm
 🥈2-o'rin: 2 million so'm
 🥉3-o'rin: 1 million so'm
-🎖4-o'rin: 500 ming so'm</strong> pul mukofotlari va boshqa ko'plab sovg'alar bilan taqdirlanishadi.
+🎖4-o'rin: 500 ming so'm</b> pul mukofotlari va boshqa ko'plab sovg'alar bilan taqdirlanishadi.
 
-❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki <strong>7000 ta</strong> ishtirokchidan so'ng marafonga <strong>START</strong> beriladi va boshqa talabgorlar qabul qilinmaydi.
+❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki <b>7000 ta</b> ishtirokchidan so'ng marafonga <b>START</b> beriladi va boshqa talabgorlar qabul qilinmaydi.
 
 🫱🏻‍🫲🏻 Ko'p o'ylanmasdan, hoziroq taklif postingizni qabul qilib oling:""", reply_markup=inline_buttons.invitation_buttons)
 
@@ -179,9 +179,9 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
         )
         await asyncio.sleep(1)
         await callback.message.answer(
-            """<strong>🎉 Sizga berilgan postni do'stlaringiz bilan ulashing.</strong>
+            """<b>🎉 Sizga berilgan postni do'stlaringiz bilan ulashing.</b>
 
-• 7 ta do'stingiz sizning taklif havolangiz orqali, botga <strong>START</strong> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
+• 7 ta do'stingiz sizning taklif havolangiz orqali, botga <b>START</b> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
         )
 
 

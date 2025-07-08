@@ -31,7 +31,7 @@ class InlineButtons:
         return InlineKeyboardMarkup(
             inline_keyboard=[
                 [
-                    InlineKeyboardButton(text="🚀 Qatnashish", url=f"https://t.me/ibratmarafon_bot?start={token}")
+                    InlineKeyboardButton(text="🚀 Qatnashish", url=f"https://t.me/ibrat_haftaligi_bot?start={token}")
                 ]
             ]
         )

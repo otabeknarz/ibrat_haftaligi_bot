@@ -29,7 +29,7 @@ dp = Dispatcher(storage=MemoryStorage())
 buttons = Buttons()
 inline_buttons = InlineButtons()
 
-photo = FSInputFile("top-students.jpg")
+photo = FSInputFile("top-students.png")
 get_welcome_text = (
     lambda join_link: f"""<b>📌 Avval qatnashib ko'ring, rahmatni keyin aytasiz!</b>
 

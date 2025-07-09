@@ -40,19 +40,21 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
         invited_user_response = get_request(
             url=f"{settings.USERS_API}{invited_user_id}/"
         )
-        if invited_user_response.ok:
+        stats_response = get_request(url=f"{settings.STATS_API}{message.from_user.id}/")
+        if invited_user_response.ok and stats_response.ok:
             invited_user_json = invited_user_response.json()
+            stats_json = stats_response.json()
             invited_user_username = invited_user_json.get("username")
 
             if invited_user_username.isdigit():
                 invited_user_name = f"{invited_user_json.get("first_name")} {invited_user_json.get("last_name")}"
                 await bot.send_message(
-                    invited_by_id, f"🥳 Tabriklaymiz! Siz {invited_user_name} ni taklif qildingiz."
+                    invited_by_id, f"🥳 Tabriklaymiz! Siz {invited_user_name} ni taklif qildingiz\nSizning ballaringiz {len(stats_json.get('invitations', []))} ta bo'ldi"
                 )
             else:
                 await bot.send_message(
                     invited_by_id,
-                    f"🥳 Tabriklaymiz! Siz @{invited_user_username} ni taklif qildingiz.",
+                    f"🥳 Tabriklaymiz! Siz @{invited_user_username} ni taklif qildingiz\nSizning ballaringiz {len(stats_json.get('invitations', []))} ta bo'ldi",
                 )
 
         else:

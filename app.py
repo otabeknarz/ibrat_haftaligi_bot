@@ -35,17 +35,13 @@ get_welcome_text = (
 
 🎙 <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz:
 
-<blockquote>
-<i>
-• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
+<blockquote><i>• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
 • <b>Shoxrux Olimov</b> – CELTA sertifikati va IELTS 8.5 sohibi;
 • <b>Otabek Mahkamov</b> – huquqshunos, bloger va jurnalist;
 • <b>Alisher Sa'dullayev</b> – Yoshlar ishlari agentligi direktori;
 • <b>Rustam Qoriyev</b> – "Ibrat Farzandlari" loyiha rahbari;
 • <b>Shohida Ibragimova</b> – moliyachi;
-• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi
-</i>
-</blockquote>
+• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi</i></blockquote>
 
 🤩 Bundan tashqari, eng faol targ'ibotchi sifatida <b><i>6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslari</i></b>ni yutib olish imkoniga ega bo'lasiz.
 
@@ -83,7 +79,7 @@ async def command_start_handler(message: Message) -> None:
 
         unjoined_channels_inline_buttons = inline_buttons.get_join_channel_buttons(settings.CHANNELS_IDs)
         await message.answer(
-        """"🔥 <b>Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
+        """🔥 <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
 
 <b>"Ibrat Academy"</b> – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
 
@@ -157,15 +153,11 @@ Xo'sh, diqqat bilan o'qing!
 
 💯 Marafonda qatnashish mutlaqo bepul va loyihamizning ko'proq odamga foydasi tegishi uchun aynan sizning yordamingiz kerak bo'ladi.
 
-<blockquote>
-<i>
-✅ <b>Sharti:</b> bot sizga taqdim qilgan maxsus link orqali <b>7 ta do'stingizni</b> loyihamizga taklif qilasiz va avtomatik tarzda loyihada ishtirok etishingiz uchun maxsus linkni qabul qilib olasiz.
+<blockquote><i>✅ <b>Sharti:</b> bot sizga taqdim qilgan maxsus link orqali <b>7 ta do'stingizni</b> loyihamizga taklif qilasiz va avtomatik tarzda loyihada ishtirok etishingiz uchun maxsus linkni qabul qilib olasiz.
 
-📌 <b>Unutmang</b>, taklif postingiz orqali to'liq ro'yxatdan o'tgan har bir do'stingiz uchun sizga +1 ball beriladi.
+📌 <b>Unutmang, taklif postingiz orqali to'liq ro'yxatdan o'tgan har bir do'stingiz uchun sizga +1 ball beriladi.</b>
 
-🤫 Va bu hali hammasi emas, agar siz eng faol targ'ibotchi bo'lishni maqsad qilsangiz, pul mukofotlari va boshqa ko'plab premium til kurslarini yutib olish imkoniga ega bo'lasiz!
-</i>
-</blockquote>
+🤫 Va bu hali hammasi emas, agar siz eng faol targ'ibotchi bo'lishni maqsad qilsangiz, pul mukofotlari va boshqa ko'plab premium til kurslarini yutib olish imkoniga ega bo'lasiz!</i></blockquote>
 
 Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 

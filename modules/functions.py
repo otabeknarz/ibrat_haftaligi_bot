@@ -78,17 +78,13 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
 
 • Endi siz <b><i>7 kun</i></b> davomida quyidagi spikerlar bilan bo'lib o'tadigan onlayn jonli va eng muhimi manfaatli suhbatlarda ishtirok eta olasiz:
 
-<blockquote>
-<i>
-• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
+<blockquote><i>• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
 • <b>Shoxrux Olimov</b> – CELTA sertifikati va IELTS 8.5 sohibi;
 • <b>Otabek Mahkamov</b> – huquqshunos, bloger va jurnalist;
 • <b>Alisher Sa'dullayev</b> – Yoshlar ishlari agentligi direktori;
 • <b>Rustam Qoriyev</b> – "Ibrat Farzandlari" loyiha rahbari;
 • <b>Shohida Ibragimova</b> – moliyachi;
-• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi
-</i>
-</blockquote>
+• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi</i></blockquote>
 
 🎁 Marhamat:""",
                     reply_markup=InlineKeyboardMarkup(

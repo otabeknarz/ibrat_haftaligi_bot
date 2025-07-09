@@ -98,7 +98,7 @@ Keyin <b>"Obuna bo'ldim✅"</b> tugmasini bosing:""",
 @dp.message(TextEqualsFilter("📊 Natijalarim"))
 async def my_stats_handler(message: Message) -> None:
     response = functions.get_request(url=f"{settings.USERS_API}{message.from_user.id}/")
-    stats_response = functions.get_request(url=f"{settings.USERS_API}stats/")
+    stats_response = functions.get_request(url=settings.STATS_API)
     if response.ok and stats_response.ok:
         json_response = response.json()
         json_stats_response = stats_response.json()

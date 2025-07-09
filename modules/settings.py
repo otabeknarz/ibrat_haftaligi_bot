@@ -9,6 +9,7 @@ USERS_SHOULD_INVITE_COUNT = 7
 
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 USERS_API = f"{BASE_URL}/api/users/users/"
+STATS_API = f"{BASE_URL}/api/users/stats/"
 INVITATIONS_API = f"{BASE_URL}/api/users/invitations/"
 
 CHANNELS_IDs = {

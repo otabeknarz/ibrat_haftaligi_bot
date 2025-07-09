@@ -36,16 +36,18 @@ get_welcome_text = (
 🎙 <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da siz 7 kun davomida 7 xil soha vakillari bilan tashkillashtirilgan manfaatli suhbatlarda qatnashib, savollaringizga javob olasiz:
 
 <blockquote>
-• Xushnudbek Xudoyberdiyev – huquqshunos;
-• Otabek Mahkamov – huquqshunos, bloger va jurnalist;
-• Rustam Qoriyev – "Ibrat Farzandlari" loyiha rahbari;
-• Alisher Sa'dullayev – Yoshlar ishlari agentligi direktori;
-• Murod Nazarov – "Murad Buildings" asoschisi;
-• Shohida Ibragimova – moliyachi;
-• Aziz Rahimov – "Rahimov school" asoschisi
+<i>
+• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
+• <b>Shoxrux Olimov</b> – CELTA sertifikati va IELTS 8.5 sohibi;
+• <b>Otabek Mahkamov</b> – huquqshunos, bloger va jurnalist;
+• <b>Alisher Sa'dullayev</b> – Yoshlar ishlari agentligi direktori;
+• <b>Rustam Qoriyev</b> – "Ibrat Farzandlari" loyiha rahbari;
+• <b>Shohida Ibragimova</b> – moliyachi;
+• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi
+</i>
 </blockquote>
 
-🤩 Bundan tashqari, eng faol targ'ibotchi sifatida 6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslarini yutib olish imkoniga ega bo'lasiz.
+🤩 Bundan tashqari, eng faol targ'ibotchi sifatida <b><i>6.500.000 so'mgacha pul mukofotlari, shuningdek, 150 dan ortiq bonusli sovg'alar, premium til kurslari</i></b>ni yutib olish imkoniga ega bo'lasiz.
 
 <b>🙌🏻 Qatnashish – mutlaqo BEPUL.</b>
 
@@ -81,11 +83,11 @@ async def command_start_handler(message: Message) -> None:
 
         unjoined_channels_inline_buttons = inline_buttons.get_join_channel_buttons(settings.CHANNELS_IDs)
         await message.answer(
-        """"Ibrat haftaligi – 7 kun, 7 yangi marra" da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
+        """"🔥 <b>Ibrat haftaligi – 7 kun, 7 yangi marra"</b> da ishtirok etish uchun bizning rasmiy sahifalarimizga obuna bo'ling va ilovamizni yuklab oling.
 
-"Ibrat Academy" – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
+<b>"Ibrat Academy"</b> – tillarni tez, oson va samarali o'rgatishga mo'ljallangan yagona onlayn ta'lim platformasi
 
-Keyin "Obuna bo'ldim✅" tugmasini bosing:""",
+Keyin <b>"Obuna bo'ldim✅"</b> tugmasini bosing:""",
             reply_markup=unjoined_channels_inline_buttons,
         )
     else:
@@ -141,7 +143,7 @@ Keyin "Obuna bo'ldim✅" tugmasini bosing:""",
             )
 
         else:
-            await callback.message.answer("""<b>"Ibrat Academy" — 22 dan ortiq tillarni istalgan vaqt va makonda mustaqil o'rganing!</b>
+            await callback.message.answer("""⚡️ <b>"Ibrat Academy" — 22 dan ortiq tillarni istalgan vaqt va makonda mustaqil o'rganing!</b>
 
 🫱🏻‍🫲🏻 Pastdagi havola orqali ilovani yuklab olishingiz mumkin. Marhamat:
 
@@ -149,35 +151,40 @@ https://onelink.to/ibratfarzandlari""")
 
             await asyncio.sleep(1)
 
-            await callback.message.answer("""😉 <b>Tabriklayman! "Ibrat haftaligi – 7 kun,, 7 yangi marra" ga xush kelibsiz!</b>
+            await callback.message.answer("""😉 <b>Tabriklayman! "Ibrat haftaligi – 7 kun, 7 yangi marra" ga xush kelibsiz!</b>
 
 Xo'sh, diqqat bilan o'qing!
 
 💯 Marafonda qatnashish mutlaqo bepul va loyihamizning ko'proq odamga foydasi tegishi uchun aynan sizning yordamingiz kerak bo'ladi.
 
-✅ Sharti: bot sizga taqdim qilgan maxsus link orqali 7 ta do'stingizni loyihamizga taklif qilasiz va avtomatik tarzda loyihada ishtirok etishingiz uchun maxsus linkni qabul qilib olasiz.
+<blockquote>
+<i>
+✅ <b>Sharti:</b> bot sizga taqdim qilgan maxsus link orqali <b>7 ta do'stingizni</b> loyihamizga taklif qilasiz va avtomatik tarzda loyihada ishtirok etishingiz uchun maxsus linkni qabul qilib olasiz.
 
-📌Unutmang, taklif postingiz orqali to'liq ro'yxatdan o'tgan har bir do'stingiz uchun sizga +1 ball beriladi.
+📌 <b>Unutmang</b>, taklif postingiz orqali to'liq ro'yxatdan o'tgan har bir do'stingiz uchun sizga +1 ball beriladi.
 
 🤫 Va bu hali hammasi emas, agar siz eng faol targ'ibotchi bo'lishni maqsad qilsangiz, pul mukofotlari va boshqa ko'plab premium til kurslarini yutib olish imkoniga ega bo'lasiz!
+</i>
+</blockquote>
+
 Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 
-🥇1-o'rin: <b>3 million so'm</b>
-🥈2-o'rin: <b>2 million so'm</b>
-🥉3-o'rin: <b>1 million so'm</b>
-🎖4-o'rin: <b>500 ming so'm pul mukofotlari </b>
+🥇<b>1-o'rin:</b> 3 million so'm
+🥈<b>2-o'rin:</b> 2 million so'm
+🥉<b>3-o'rin:</b> 1 million so'm
+🎖<b>4-o'rin:</b> 500 ming so'm pul mukofotlari
 
-• 5-20-o'rin – Rustam Qoriyevning mualliflik kitoblari;
-• 21-40-o'rin – "Super Start" beginner;
-• 41-60-o'rin – "Super Start" elementary;
-• 61-80-o'rin – "Tezkor Turk tili" 
-• 81-100-o'rin – "Tezkor Rus tili" qiymati 159.000 so'mga teng bo'lgan 3 oylik premium til kurslari;
+• <b>5-20-o'rin</b> – Rustam Qoriyevning mualliflik kitoblari;
+• <b>21-40-o'rin</b> – "Super Start" beginner;
+• <b>41-60-o'rin</b> – "Super Start" elementary;
+• <b>61-80-o'rin</b> – "Tezkor Turk tili" 
+• <b>81-100-o'rin</b> – "Tezkor Rus tili" qiymati 159.000 so'mga teng bo'lgan 3 oylik premium til kurslari;
 
-• 101-120-o'rin – 40% lik chegirma;
-• 121-160-o'rin – 30% lik chegirma;
-• 161-200-o'rin – 20% lik chegirma taqdim qilinadi.
+• <b>101-120-o'rin</b> – 40% lik chegirma;
+• <b>121-160-o'rin</b> – 30% lik chegirma;
+• <b>161-200-o'rin</b> – 20% lik chegirma taqdim qilinadi.
 
-❗️ Esingizda bo'lsin, loyihada birinchi bo'lib 7 ta do'stini taklif qilgan dastlabki <b>7000 ta</b> ishtirokchidan so'ng marafonga <b>START</b> beriladi va boshqa talabgorlar qabul qilinmaydi.
+❗️ Esingizda bo'lsin, loyihada birinchi bo'lib <b>7 ta</b> do'stini taklif qilgan dastlabki <b>7000 ta</b> ishtirokchidan so'ng marafonga <b>START</b> beriladi va boshqa talabgorlar qabul qilinmaydi.
 
 🫱🏻‍🫲🏻 Ko'p o'ylanmasdan, hoziroq taklif postingizni qabul qilib oling:""", reply_markup=inline_buttons.invitation_buttons)
 
@@ -200,7 +207,7 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
         await callback.message.answer(
             """🎉 <b>Sizga berilgan postni do'stlaringiz bilan ulashing.</b>
 
-• 7 ta do'stingiz sizning taklif havolangiz orqali, botga <b>START</b> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
+• 7 ta do'stingiz sizning taklif havolangiz orqali botga <b>START</b> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
         )
 
 

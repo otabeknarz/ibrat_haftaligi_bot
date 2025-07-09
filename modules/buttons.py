@@ -13,7 +13,7 @@ class Buttons:
 
     @staticmethod
     def main_keyboard():
-        return ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text="📊 Natijalarim")]])
+        return ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text="📊 Natijalarim")]], resize_keyboard=True)
 
 
 class InlineButtons:

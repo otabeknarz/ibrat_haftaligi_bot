@@ -72,18 +72,24 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
             ):
                 await bot.send_message(
                     invited_by_id,
-                    """🙌🏻 Barakalla, siz buni uddaladingiz!
+                    """🙌🏻 <b>Barakalla, siz buni uddaladingiz!</b>
 
-🤩 Siz shartni to'liq bajarib, 7 ta do'stingizni loyihaga taklif qilib "Ibrat haftaligi – 7 kun, 7 yangi marra" ning rasman qatnashchisiga aylandingiz!
+🤩 Siz shartni to'liq bajarib, 7 ta do'stingizni loyihaga taklif qilib <b>"Ibrat haftaligi – 7 kun, 7 yangi marra"</b> ning rasman qatnashchisiga aylandingiz!
 
-• Endi siz 7 kun davomida quyidagi spikerlar bilan bo'lib o'tadigan onlayn jonli va eng muhimi manfaatli suhbatlarda ishtirok eta olasiz:
-• Xushnudbek Xudoyberdiyev – huquqshunos;
-• Otabek Mahkamov – huquqshunos, bloger va jurnalist;
-• Rustam Qoriyev – "Ibrat Farzandlari" loyiha rahbari;
-• Alisher Sa'dullayev – Yoshlar ishlari agentligi direktori;
-• Murod Nazarov – "Murad Buildings" asoschisi;
-• Shohida Ibragimova – moliyachi;
-• Aziz Rahimov – "Rahimov school" asoschisi
+• Endi siz <b><i>7 kun</i></b> davomida quyidagi spikerlar bilan bo'lib o'tadigan onlayn jonli va eng muhimi manfaatli suhbatlarda ishtirok eta olasiz:
+
+<blockquote>
+<i>
+• <b>Xushnudbek Xudoyberdiyev</b> – huquqshunos;
+• <b>Shoxrux Olimov</b> – CELTA sertifikati va IELTS 8.5 sohibi;
+• <b>Otabek Mahkamov</b> – huquqshunos, bloger va jurnalist;
+• <b>Alisher Sa'dullayev</b> – Yoshlar ishlari agentligi direktori;
+• <b>Rustam Qoriyev</b> – "Ibrat Farzandlari" loyiha rahbari;
+• <b>Shohida Ibragimova</b> – moliyachi;
+• <b>Aziz Rahimov</b> – "Rahimov school" asoschisi
+</i>
+</blockquote>
+
 🎁 Marhamat:""",
                     reply_markup=InlineKeyboardMarkup(
                         inline_keyboard=[

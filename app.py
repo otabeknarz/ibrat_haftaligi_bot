@@ -98,10 +98,42 @@ Keyin <b>"Obuna bo'ldim✅"</b> tugmasini bosing:""",
 @dp.message(TextEqualsFilter("📊 Natijalarim"))
 async def my_stats_handler(message: Message) -> None:
     response = functions.get_request(url=f"{settings.USERS_API}{message.from_user.id}/")
-    if response.ok:
+    stats_response = functions.get_request(url=f"{settings.USERS_API}stats/")
+    if response.ok and stats_response.ok:
         json_response = response.json()
+        json_stats_response = stats_response.json()
+        stats = ""
+        for key, stat in enumerate(json_stats_response, start=1):
+            username = (stat.get("username", "1"), stat.get("username", "1").isdigit())
+            stats += f"{key}. <b>{stat.get('first_name') + stat.get('last_name', '') if username[1] else "@" + username[0]}</b> - <b>{stat.get("invitations_count")}</b>\n"
         await message.answer(
-            f"Sizda <b>{len(json_response.get('invitations'))}</b> ball bor",
+            f"""🎯 <b>Eng ko'p ball to'plagan faol ishtirokchilar ro'yxati:</b>
+
+Sizning natijangiz: <b>{len(json_response.get('invitations', []))}</b>
+
+
+{stats}
+
+📌 Eslatib o'tamiz, eng faol ilk 200 ta ishtirokchiga quyidagi sovg'alar topshiriladi:
+
+🥇<b>1-o'rin:</b> 3 million so'm
+🥈<b>2-o'rin:</b> 2 million so'm
+🥉<b>3-o'rin:</b> 1 million so'm
+🎖<b>4-o'rin:</b> 500 ming so'm pul mukofotlari
+
+• <b>5-20-o'rin</b> – Rustam Qoriyevning mualliflik kitoblari;
+• <b>21-40-o'rin</b> – "Super Start" beginner;
+• <b>41-60-o'rin</b> – "Super Start" elementary;
+• <b>61-80-o'rin</b> – "Tezkor Turk tili" 
+• <b>81-100-o'rin</b> – "Tezkor Rus tili" qiymati 159.000 so'mga teng bo'lgan 3 oylik premium til kurslari;
+
+• <b>101-120-o'rin</b> – 40% lik chegirma;
+• <b>121-160-o'rin</b> – 30% lik chegirma;
+• <b>161-200-o'rin</b> – 20% lik chegirma taqdim qilinadi.
+
+✅ Sizda - ball mavjud va siz - o'rindasiz. Yanada ko'proq ball to'plashda davom eting!
+
+*G'oliblar 21-iyul, 19:00 da aniqlanadi.""",
             reply_markup=buttons.main_keyboard()
         )
     else:

@@ -94,7 +94,7 @@ async def handle_start_with_invitation(bot: Bot, message: Message, parts):
                             [
                                 InlineKeyboardButton(
                                     text="🎯 Ishtirok etish",
-                                    url="https://t.me/+5H5gCc1MxO5iYzUy",
+                                    url="https://t.me/+Bsy4O1zt9eg5YTgy",  # https://t.me/+5H5gCc1MxO5iYzUy
                                 )
                             ]
                         ]

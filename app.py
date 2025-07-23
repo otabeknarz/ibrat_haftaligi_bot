@@ -280,7 +280,7 @@ async def send_post_to_everyone(message: Message, state: FSMContext):
             logger.error(e)
             stats["failed_count"] += 1
 
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(0.2)
 
     await message.reply(f"All stats\nSent: {stats['sent_count']}\nFailed (pressed block maybe): {stats['failed_count']}\nTotal: {stats['total_count']}\nposting completed")
 

@@ -243,7 +243,7 @@ async def send_post_to_everyone(message: Message, state: FSMContext):
     if message.from_user.id not in settings.ADMINS.keys():
         return
 
-    await message.answer(f"Eeee assalomu alaykum {settings.ADMINS[message.from_user.id]}, nima tashash kere odamlaga, tasheng!", buttons.cancel_posting)
+    await message.answer(f"Eeee assalomu alaykum {settings.ADMINS[message.from_user.id]}, nima tashash kere odamlaga, tasheng!", reply_markup=buttons.cancel_posting)
     await state.set_state(SendPostStates.post)
 
 

@@ -273,13 +273,16 @@ async def send_post_to_everyone(message: Message, state: FSMContext):
         try:
             await message.copy_to(user.get("id"))
             stats["sent_count"] += 1
+            if stats["sent_count"] % 1000 == 0:
+                await message.reply(f"Stats\nSent: {stats['sent_count']}\nFailed (pressed block maybe): {stats['failed_count']}\nTotal: {stats['total_count']}\nstill sending")
+
         except Exception as e:
             logger.error(e)
             stats["failed_count"] += 1
 
         await asyncio.sleep(0.5)
 
-    await message.reply(f"Stats\nSent: {stats['sent_count']}\nFailed (pressed block maybe): {stats['failed_count']}\nTotal: {stats['total_count']}")
+    await message.reply(f"All stats\nSent: {stats['sent_count']}\nFailed (pressed block maybe): {stats['failed_count']}\nTotal: {stats['total_count']}\nposting completed")
 
 
 async def main() -> None:

@@ -10,6 +10,11 @@ from aiogram.types import (
 class Buttons:
     def __init__(self):
         self.remove_keyboard = ReplyKeyboardRemove()
+        self.cancel_posting = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="Iiii to'xta bekor qil")]
+            ]
+        )
 
     @staticmethod
     def main_keyboard():

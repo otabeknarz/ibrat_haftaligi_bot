@@ -243,13 +243,18 @@ async def send_post_to_everyone(message: Message, state: FSMContext):
     if message.from_user.id not in settings.ADMINS.keys():
         return
 
-    await message.answer(f"Eeee assalomu alaykum {settings.ADMINS[message.from_user.id]}, nima tashash kere odamlaga, tasheng!")
+    await message.answer(f"Eeee assalomu alaykum {settings.ADMINS[message.from_user.id]}, nima tashash kere odamlaga, tasheng!", buttons.cancel_posting)
     await state.set_state(SendPostStates.post)
 
 
 @dp.message(SendPostStates.post)
 async def send_post_to_everyone(message: Message, state: FSMContext):
     if message.from_user.id not in settings.ADMINS.keys():
+        return
+
+    if message.text == "Iiii to'xta bekor qil":
+        await message.answer("Ha bo'ldi bo'ldi otmen qildim xavotir omeng...", reply_markup=buttons.remove_keyboard)
+        await state.clear()
         return
 
     users_response = get_request(settings.USERS_API)

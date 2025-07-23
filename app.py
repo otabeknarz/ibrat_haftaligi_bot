@@ -2,6 +2,8 @@ import asyncio
 import logging
 import sys
 from os import getenv
+
+from aiogram.fsm.context import FSMContext
 from dotenv import load_dotenv
 
 from aiogram import Bot, Dispatcher, html
@@ -15,6 +17,8 @@ from modules import functions
 from modules import settings
 from modules.buttons import Buttons, InlineButtons
 from modules.filters import TextEqualsFilter
+from modules.functions import get_request
+from modules.states import SendPostStates
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -233,6 +237,35 @@ Unga ko'ra, eng ko'p odam taklif qilgan faol targ'ibotchilar:
 
 • 7 ta do'stingiz sizning taklif havolangiz orqali botga <b>START</b> berib, to'liq obuna shartlarini bajarsa, sizga marafon bo'ladigan kanal uchun bir martalik link beriladi.""", reply_markup=buttons.main_keyboard()
         )
+
+@dp.message(TextEqualsFilter("send_post_to_everyone"))
+async def send_post_to_everyone(message: Message, state: FSMContext):
+    if message.from_user.id not in settings.ADMINS.keys():
+        return
+
+    await message.answer(f"Eeee assalomu alaykum {settings.ADMINS[message.from_user.id]}, nima tashash kere odamlaga, tasheng!")
+    await state.set_state(SendPostStates.post)
+
+
+@dp.message(SendPostStates.post)
+async def send_post_to_everyone(message: Message, state: FSMContext):
+    if message.from_user.id not in settings.ADMINS.keys():
+        return
+
+    users_response = get_request(settings.USERS_API)
+    if not users_response.ok:
+        await message.answer("Serverda xatolik boldi uzur")
+        await state.clear()
+        return
+
+    users = users_response.json()
+    for user in users:
+        try:
+            await message.copy_to(user.get("id"))
+        except Exception as e:
+            logger.error(e)
+
+        await asyncio.sleep(0.5)
 
 
 async def main() -> None:

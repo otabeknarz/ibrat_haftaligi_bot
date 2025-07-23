@@ -15,3 +15,7 @@ INVITATIONS_API = f"{BASE_URL}/api/users/invitations/"
 CHANNELS_IDs = {
     -1001414632886: ("Ibrat Farzandlari", "https://t.me/ibratfarzandlari"),
 }
+
+ADMINS = {
+    5597773846: "Zuhra",
+}

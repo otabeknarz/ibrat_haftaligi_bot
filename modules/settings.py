@@ -18,4 +18,5 @@ CHANNELS_IDs = {
 
 ADMINS = {
     5597773846: "Zuhra",
+    5551503420: "Otabek Narz"
 }
